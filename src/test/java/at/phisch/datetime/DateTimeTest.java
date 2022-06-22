@@ -27,6 +27,7 @@ class DateTimeTest {
 
     @Test
     void getDate() {
-        assertEquals("2018-08-19", DateTime.getDate(getClock()));
+        assertEquals("2018-08-19", DateTime.getDate(getClock(), "yyyy-MM-dd"));
+        assertEquals("19/08/2018", DateTime.getDate(getClock(), "dd/MM/yyyy"));
     }
 }

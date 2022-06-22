@@ -10,8 +10,8 @@ public class DateTime {
         return LocalDateTime.now(clock).format(DateTimeFormatter.ISO_LOCAL_TIME);
     }
 
-    public static String getDate(Clock clock) {
-        return LocalDateTime.now(clock).format(DateTimeFormatter.ISO_DATE);
+    public static String getDate(Clock clock, String format) {
+        return LocalDateTime.now(clock).format(DateTimeFormatter.ofPattern(format));
     }
 
 }

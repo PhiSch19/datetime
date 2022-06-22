@@ -18,8 +18,8 @@ public class DateTimeController {
     }
 
     @GetMapping("/api/date")
-    public String date() {
-        return DateTime.getDate(Clock.systemDefaultZone());
+    public String date(@RequestParam("format") String format) {
+        return DateTime.getDate(Clock.systemDefaultZone(), format);
     }
 
 }

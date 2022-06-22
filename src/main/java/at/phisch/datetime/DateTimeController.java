@@ -17,4 +17,9 @@ public class DateTimeController {
         return DateTime.getTime(Clock.systemDefaultZone());
     }
 
+    @GetMapping("/api/date")
+    public String date() {
+        return DateTime.getDate(Clock.systemDefaultZone());
+    }
+
 }
